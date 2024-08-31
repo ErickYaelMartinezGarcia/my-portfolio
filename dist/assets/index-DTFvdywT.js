@@ -47,7 +47,8 @@
                   <div class="px-lg-4 rounded-5 rounded-top-0" style="background-color:rgb(0,4,20)">
                     <div class="d-flex justify-content-center">
                           <img class="img-fluid w-75 mx-auto"
-                              src="./src/assets/img/empresas-logos/erick.png" alt="" />
+                              src="./public/img/empresas-logos/erick.png" alt="" />
+                              
                     </div>
                   </div>
               </div>
@@ -110,7 +111,7 @@
                    </div>
 
                       <div>
-                        <a class="btn-lg btn btn-primary" href="./src/assets/documents/cvErickYaelMartinezGarcia.pdf" download="CV_ErickYaelMartinezGarcia.pdf">Descarga mi cv</a>
+                        <a class="btn-lg btn btn-primary" href="./public/documents/cvErickYaelMartinezGarcia.pdf" download="CV_ErickYaelMartinezGarcia.pdf">Descarga mi cv</a>
                       </div>
                   </div>
 
@@ -118,8 +119,8 @@
               </footer>
 
      </div>
-    `,data(){return{infoJob:{img:"./src/assets/img/empresas-logos/egam-logo.png",title:"E-gam Digital",role:"Desarrollador Front End",date:"Nov/2022 - Jun/2024",description:`--Desarrolle y actualize modulos para el cliente y de uso interno, creados con Vue.js 3,
-             bootstrap y  de Laravel. Utilize mySQL, axios entre otras integraciones de servicios mediante APIs`},infoCertification:{img:"https://www.freecodecamp.org/espanol/news/content/images/2020/11/fcc_puck_600_social-1.jpg",title:"Certificacion",role:"Legacy JavaScript Algorithms and Data Structures",date:"Free Code Camp",link:"https://www.freecodecamp.org/espanol/certification/Erick_Yael_Mtz_G/javascript-algorithms-and-data-structures"},infoTecnico:{img:"./src/assets/img/empresas-logos/cetecLogo.png",title:"Tecnico",role:"En Sistemas y web master",date:"Cetec Sta Clara S.C"},infoBachiller:{img:"./src/assets/img/empresas-logos/bachiller.jpg",title:"Bachillerato tecnico",role:"",date:"Centro de estudios administrativos Quetzalcoatl"}}},methods:{openLink:function(e){e&&window.open(e)},copyText:function(e){navigator.clipboard.writeText(e).then(()=>console.log("Texto copiado")).catch(t=>console.log("algo salio mal",t))}},mounted(){},watch:{}},Ym={props:{},template:`
+    `,data(){return{infoJob:{img:"./public/img/empresas-logos/egam-logo.png",title:"E-gam Digital",role:"Desarrollador Front End",date:"Nov/2022 - Jun/2024",description:`--Desarrolle y actualize modulos para el cliente y de uso interno, creados con Vue.js 3,
+             bootstrap y  de Laravel. Utilize mySQL, axios entre otras integraciones de servicios mediante APIs`},infoCertification:{img:"https://www.freecodecamp.org/espanol/news/content/images/2020/11/fcc_puck_600_social-1.jpg",title:"Certificacion",role:"Legacy JavaScript Algorithms and Data Structures",date:"Free Code Camp",link:"https://www.freecodecamp.org/espanol/certification/Erick_Yael_Mtz_G/javascript-algorithms-and-data-structures"},infoTecnico:{img:"./public/img/empresas-logos/cetecLogo.png",title:"Tecnico",role:"En Sistemas y web master",date:"Cetec Sta Clara S.C"},infoBachiller:{img:"./public/img/empresas-logos/bachiller.jpg",title:"Bachillerato tecnico",role:"",date:"Centro de estudios administrativos Quetzalcoatl"}}},methods:{openLink:function(e){e&&window.open(e)},copyText:function(e){navigator.clipboard.writeText(e).then(()=>console.log("Texto copiado")).catch(t=>console.log("algo salio mal",t))}},mounted(){},watch:{}},Ym={props:{},template:`
 
     <nav class="navbar navbar-expand-lg col-lg-10 mx-auto fs-4 fw-normal" data-bs-theme="dark">
       <div class="container-fluid text-white">
