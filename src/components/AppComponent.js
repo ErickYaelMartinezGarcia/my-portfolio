@@ -18,7 +18,7 @@ const AppComponent = {
                   <div class="px-lg-4 rounded-5 rounded-top-0" style="background-color:rgb(0,4,20)">
                     <div class="d-flex justify-content-center">
                           <img class="img-fluid w-75 mx-auto"
-                              src="./public/img/empresas-logos/erick.png" alt="" />
+                              src="/img/empresas-logos/erick.png" alt="" />
                               
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const AppComponent = {
                    </div>
 
                       <div>
-                        <a class="btn-lg btn btn-primary" href="./public/documents/cvErickYaelMartinezGarcia.pdf" download="CV_ErickYaelMartinezGarcia.pdf">Descarga mi cv</a>
+                        <a class="btn-lg btn btn-primary" href="/documents/cvErickYaelMartinezGarcia.pdf" download="CV_ErickYaelMartinezGarcia.pdf">Descarga mi cv</a>
                       </div>
                   </div>
 
@@ -95,7 +95,7 @@ const AppComponent = {
     data() {
         return {
           infoJob:{
-            img:'./public/img/empresas-logos/egam-logo.png',
+            img:'/img/empresas-logos/egam-logo.png',
             title:"E-gam Digital",
             role:"Desarrollador Front End",
             date:"Nov/2022 - Jun/2024",
@@ -110,13 +110,13 @@ const AppComponent = {
             link: `https://www.freecodecamp.org/espanol/certification/Erick_Yael_Mtz_G/javascript-algorithms-and-data-structures`
           },
           infoTecnico:{
-            img:'./public/img/empresas-logos/cetecLogo.png',
+            img:'/img/empresas-logos/cetecLogo.png',
             title:"Tecnico",
             role:"En Sistemas y web master",
             date:"Cetec Sta Clara S.C",
           },
           infoBachiller:{
-            img:'./public/img/empresas-logos/bachiller.jpg',
+            img:'/img/empresas-logos/bachiller.jpg',
             title:"Bachillerato tecnico",
             role:"",
             date:"Centro de estudios administrativos Quetzalcoatl",
