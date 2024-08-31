@@ -31,7 +31,7 @@ const HeaderComponent = {
     
 data() {
     return {
-        titles:['Inicio','Experiencia','Educacion','Proyectos','Contacto','Skills'],
+        titles:['Inicio','Experiencia','Educación','Proyectos','Contacto','Skills'],
         titleSelected: 0,
     };
   },

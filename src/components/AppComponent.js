@@ -99,8 +99,8 @@ const AppComponent = {
             title:"E-gam Digital",
             role:"Desarrollador Front End",
             date:"Nov/2022 - Jun/2024",
-            description:`--Desarrolle y actualize modulos para el cliente y de uso interno, creados con Vue.js 3,
-             bootstrap y  de Laravel. Utilize mySQL, axios entre otras integraciones de servicios mediante APIs`,
+            description:`Desarrollé y actualicé módulos para clientes y uso interno, creados con Vue.js 3, bootstrap y Laravel.
+             Utilicé MySQL, Axios y otras integraciones de servicios mediante APIs.`,
           },
           infoCertification:{
             img:'https://www.freecodecamp.org/espanol/news/content/images/2020/11/fcc_puck_600_social-1.jpg',
