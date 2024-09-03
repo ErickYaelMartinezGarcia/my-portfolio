@@ -9,17 +9,14 @@ const AppComponent = {
     <section id="Inicio" class="mx-auto" style="height:min-10vh">
       <header-component class="mt-4"></header-component>
     </section>
-    
         <section class="d-lg-flex align-items-center" style="min-height:85vh">
           <presentation-component></presentation-component>
             <div class="col-lg-5 col-md-6 mx-lg-5 mt-5 mt-lg-0 me-auto rounded-5">
               <div class="px-lg-3 pt-0 rounded-5" style="background-color:rgb(0,4,14)">
-
                   <div class="px-lg-4 rounded-5 rounded-top-0" style="background-color:rgb(0,4,20)">
                     <div class="d-flex justify-content-center">
                           <img class="img-fluid w-75 mx-auto"
                               src="/img/empresas-logos/erick.png" alt="" />
-                              
                     </div>
                   </div>
               </div>
@@ -30,35 +27,49 @@ const AppComponent = {
               <h1 class="text-white text-center my-5 pb-5">Experiencia</h1>
               <div class="my-auto row justify-content-center align-items-center mb-5 pb-5">
                 <job-card-component class="col-lg-3 mx-auto my-auto" :info-job="infoJob"/>
-                   
               </div>
             </section>
-
-
               <section class="mb-5 pt-5" id="Skills" style="min-height:100vh">
                 <h1 class="text-white text-center mt-5 mb-5 pb-5 rounded-5">Habilidades</h1>
-                
-                
+                <div class="row mx-auto">
+                          <div v-for="icon in iconsLenguage"
+                            class="col-lg-4 col-4 col-md-6 mx-auto mb-5">
+                              <div class="rounded-4  mx-auto col-lg-4 col-sm-4 h-100">
+                                <span class="h-100 text-center img-fluid" v-html="icon"></span>
+                              </div>
+                          </div>
+                </div>
               </section>
-
-               <section id="Educacion" style="min-height:100vh">
+               <section id="Educacion" style="min-height:95vh">
                 <h1 class="text-white text-center mb-5 pb-5">Educaci&oacuten</h1>
                     <div class="row mx-auto">
-                     <education-card-component class="col-lg-4 mx-auto" :info-job="infoCertification"/>
-                      <education-card-component class="col-lg-4 mx-auto" :info-job="infoTecnico" />
-                      <div class="mt-3">
-                      <education-card-component class="col-lg-4 mx-auto" :info-job="infoBachiller" />
-                      </div>
-                      
+                    <template v-for="(info,i) in infoEducation">
+                          <div class="col-lg-5 mx-auto my-auto">
+                             <education-card-component class="col-lg-10 mb-2" :info-job="info"/>
+                         </div>
+                     </template>
                     </div>
-                     
               </section>
-
-
                <section id="Proyectos" style="min-height:100vh">
                 <h1 class="text-white text-center mb-5 pb-5">Proyectos</h1>
-              
+            
+
+
+
+
               </section>
+            
+
+              <!-- start T O A S T -->
+                            <div id="liveToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="d-flex">
+                                  <div class="toast-body">
+                                    Email copiado en el portapapeles
+                                  </div>
+                                  <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                              </div>
+              <!-- end TOAST -->
 
               <footer id="Contacto" class="mx-auto p-4 p-lg-5 m-3 rounded-4" style="background-color: rgba(70,170,130)">
               <div>
@@ -82,15 +93,12 @@ const AppComponent = {
                         <i class="bi bi-instagram fs-2"></i>
                       </div>
                    </div>
-
                       <div class="my-auto mx-auto mt-2 mt-lg-0">
-                        <a class="btn-lg btn btn-primary rounded-4" href="/documents/cvErickYaelMartinezGarcia.pdf" download="CV_ErickYaelMartinezGarcia.pdf">Descarga mi cv</a>
+                        <a class="btn-lg btn btn-primary rounded-4 live" href="/documents/cvErickYaelMartinezGarcia.pdf" download="CV_ErickYaelMartinezGarcia.pdf">Descarga mi cv</a>
                       </div>
                   </div>
-
               </div>
               </footer>
-
      </div>
     `,
     
@@ -104,57 +112,73 @@ const AppComponent = {
             description:`Desarrollé y actualicé módulos para clientes y uso interno, creados con Vue.js 3, bootstrap y Laravel.
              Utilicé MySQL, Axios y otras integraciones de servicios mediante APIs.`,
           },
-          infoCertification:{
-            img:'https://www.freecodecamp.org/espanol/news/content/images/2020/11/fcc_puck_600_social-1.jpg',
-            title:"Certificacion",
-            role:"Legacy JavaScript Algorithms and Data Structures",
-            date:"Free Code Camp",
-            link: `https://www.freecodecamp.org/espanol/certification/Erick_Yael_Mtz_G/javascript-algorithms-and-data-structures`
-          },
-          infoTecnico:{
-            img:'/img/empresas-logos/cetecLogo.png',
-            title:"Tecnico",
-            role:"En Sistemas y web master",
-            date:"Cetec Sta Clara S.C",
-          },
-          infoBachiller:{
-            img:'/img/empresas-logos/bachiller.jpg',
-            title:"Bachillerato tecnico",
-            role:"",
-            date:"Centro de estudios administrativos Quetzalcoatl",
+          infoEducation:{
+            infoCertification:{
+              img:'https://www.freecodecamp.org/espanol/news/content/images/2020/11/fcc_puck_600_social-1.jpg',
+              title:"Certificacion",
+              role:"Legacy JavaScript Algorithms and Data Structures",
+              date:"Free Code Camp",
+              link: `https://www.freecodecamp.org/espanol/certification/Erick_Yael_Mtz_G/javascript-algorithms-and-data-structures`
+            },
+            infoTecnico:{
+              img:'/img/empresas-logos/cetecLogo.png',
+              title:"Tecnico",
+              role:"En Sistemas y web master",
+              date:"Cetec Sta Clara S.C",
+            },
+            infoBachiller:{
+              img:'/img/empresas-logos/bachiller.jpg',
+              title:"Bachillerato tecnico",
+              role:"",
+              date:"Centro de estudios administrativos Quetzalcoatl",
+            },
           },
           iconsLenguage: {
-              html: ``,
-              js: ``,
-              bootstrap: ``,
-              css: ``,
-              vue: `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" id="vuejs">
-                    <path fill="#35495e" d="m32.191 97.953c-0.36865 0-0.73578 0.1056-1.0547 0.31641-0.31891 0.2108-0.61133 0.57433-0.61133 1.041 0 0.06137-0.03614 0.1992 0.08398 0.43945l-0.03125-0.07617 6.4102 20.797c0.11475 0.39015 0.39019 0.68831 0.69922 0.85938s0.64908 0.23633 0.97852 0.23633c0.70045 0 1.4696-0.33428 1.7051-1.0879v-0.002l6.4043-20.875v-0.07617c0 0.1053 0.03125 0.04444 0.03125-0.18359 0-0.47463-0.30314-0.82361-0.62695-1.043-0.32382-0.21936-0.70504-0.3457-1.1016-0.3457-0.48903 0-1.0516 0.29744-1.2402 0.86328l-0.0039 0.0059-5.1699 17.254-5.1895-17.223c-0.07694-0.30774-0.28421-0.56558-0.52539-0.70898s-0.50427-0.19141-0.75782-0.19141zm51.055 1.0723c-1.0204 0-1.8809 0.7817-1.8809 1.7598 0 0.97806 0.84711 1.7871 1.8809 1.7871 1.0142 0 1.8203-0.8242 1.8203-1.7871 0-0.96291-0.82002-1.7598-1.8203-1.7598zm-15.029 6.6582c-3.4884 0-6.3613 2.7915-6.3613 6.1465v3.4375c0 1.8791 0.74876 3.4896 2.0195 4.6016 1.2708 1.1119 3.0446 1.7266 5.0781 1.7266 1.502 0 2.7262-0.33628 3.6016-0.79297 0.43766-0.22834 0.78933-0.48448 1.0488-0.76367 0.2595-0.27918 
-                        0.45117-0.58478 0.45117-0.96679-0.000001-0.35077-0.13509-0.65471-0.35352-0.92774-0.21842-0.27303-0.56248-0.52344-1.0059-0.52344-0.32027 0-0.56614 0.13479-0.7793 0.26563-0.21315 0.13083-0.41335 0.27538-0.6543 0.41406-0.4819 0.27736-1.1204 0.54688-2.248 0.54688-1.2554 0-2.3023-0.35802-3.0234-0.95899-0.72117-0.60097-1.1406-1.4353-1.1406-2.5293v-0.63672h6.4355c0.6864 0 1.4494 0.001 2.1094-0.41993 0.65995-0.42135 1.0605-1.2588 1.0605-2.5332 0-3.5292-2.9447-6.0859-6.2383-6.0859zm24.186 0c-1.8542 0-3.2178 0.59997-4.0938 1.502-0.87597 0.90198-1.2539 2.0754-1.2539 3.1719 0 1.3974 0.56454 2.3989 1.373 3.041 0.80851 0.64211 1.8144 0.96522 2.7715 1.2539 0.95712 0.28869 1.8732 0.5449 2.4883 0.92383 0.6151 0.37894 0.94531 0.78884 0.94531 1.6543 0 0.46456-0.1396 0.83433-0.51758 1.1367-0.37798 0.30238-1.049 0.54101-2.1426 0.54101-1.2937 0-2.0167-0.31909-2.543-0.64453-0.26312-0.16272-0.47512-0.33158-0.69336-0.48242s-0.46571-0.31445-0.8125-0.31445c-0.41739 0-0.72514 0.25714-0.91211 0.52343-0.18697 0.2663-0.29492 0.56884-0.29492 0.89649 0 0.40512 
-                        0.19716 0.76131 0.47656 1.0703 0.27941 0.30901 0.65746 0.58398 1.1211 0.82422 0.92726 0.48049 2.2041 0.81445 3.7207 0.81445 1.6465 0 3.0006-0.4019 3.959-1.1816 0.95834-0.77974 1.4805-1.9389 1.4805-3.2754 0-1.5096-0.54876-2.5951-1.3574-3.3125-0.80867-0.71736-1.8296-1.0872-2.8008-1.3848-0.97115-0.29761-1.9057-0.52926-2.5312-0.85547-0.62552-0.32622-0.91992-0.62713-0.91992-1.3203 0-0.37496 0.15-0.84657 0.53125-1.2187 0.38125-0.37218 1.0032-0.67383 2.0371-0.67383 0.82606 0 1.4401 0.1897 1.9316 0.39062 0.24577 0.10046 0.45939 0.20542 0.66211 0.29297 0.20272 0.0875 0.38964 0.17383 0.6582 0.17383 0.48505 0 0.81748-0.31997 1.0156-0.61719 0.19815-0.29722 0.3125-0.59036 0.3125-0.92578 0-0.42021-0.26147-0.71802-0.55078-0.94141s-0.65198-0.40072-1.0723-0.55468c-0.84057-0.30794-1.9126-0.50782-2.9883-0.50782zm-43.857 0.18555c-0.81105 0-1.5117 0.50854-1.5117 1.2656v8.1934c0 3.3238 2.8258 6.2676 6.3301 6.2676 3.4452 0 6.3301-2.9092 6.3301-6.2676v-8.2226c0-0.37893-0.20849-0.70759-0.48242-0.91602-0.27393-0.20842-0.622-0.32031-1-0.32031s-0.72801 0.11043-1.0078 0.31445c-0.27981 0.20403-0.50391 0.53013-0.50391 0.92188v8.2226c0 1.7423-1.5183 3.4277-3.3359 3.4277-1.8478 0-3.3359-1.7154-3.3359-3.4277v-8.1934c0-0.39244-0.21435-0.695-0.48047-0.91016s-0.6137-0.35547-1.002-0.35547zm34.701 0c-0.37921 0-0.73049 0.0976-1.0098 0.30859-0.27928 0.21101-0.4707 0.55819-0.4707 0.92774v15.096c0 1.1328-0.07939 2.083-0.32812 2.6582-0.24873 0.57519-0.54222 0.83007-1.3809 0.83007-0.74093 0-1.3594 0.64736-1.3594 1.4219 0 0.32192 0.10384 0.67528 0.36719 0.95117s0.67217 0.4375 1.1445 0.4375c1.5943 0 2.8141-0.70695 3.541-1.8555 0.72696-1.1485 1.0098-2.6849 1.0098-4.4434v-15.096c0-0.39336-0.22472-0.7356-0.50977-0.9375-0.28504-0.20191-0.63516-0.29883-1.0039-0.29883zm-15.061 2.4727c1.9913 0 3.3359 1.6671 3.3359 3.3652 0 0.18502-0.01992 0.30619-0.03906 0.36133-0.01914 0.0551-0.01733 0.048-0.04492 0.0664-0.05518 0.0368-0.36251 0.11523-0.95117 0.11523h-5.6367v-0.66602c0-1.7772 1.4845-3.2422 3.3359-3.2422zm9.5117 9.3711c-1.0877 0-1.9121 0.90005-1.9121 1.9414 0 1.0003 0.81206 1.9121 1.9121 1.9121 1.042 0 1.8809-0.88405 1.8809-1.9121 0-1.067-0.8528-1.9414-1.8809-1.9414z" style="block-progression:tb;isolation:auto;mix-blend-mode:normal;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none"></path>
-                    <g transform="translate(9.106 -7.663)scale(.85771)">
-                      <path fill="none" d="m-2.3125e-8 8.9337 49.854 0.1586 14.167 24.47 14.432-24.47 49.547-0.1574-63.834 110.14zm126.98 0.6374-24.36 0.0207-38.476 66.052-38.453-66.052-24.749-0.0196 63.211 107.89zm-25.149-0.008-22.745 0.16758-15.053 24.647-14.817-24.647-22.794-0.1679 37.731 64.476zM25.997 9.3929l23.002 0.0087 15.036 24.958 14.983-24.956 22.982-0.0061-37.85 65.655"></path>
-                      <path fill="#35495e" d="m25.997 9.3929 23.002 0.0087 15.036 24.958 14.983-24.956 22.982-0.0061-37.85 65.655z"></path>
-                      <path fill="#41b883" d="m0.91068 9.5686 25.066-0.1711 38.151 65.658 37.852-65.654 25.11 0.0263-62.966 108.06z"></path>
-                    </g>
+              html: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="html">
+                      <polygon fill="#E44D26" points="3.345 21.601 1.419 0 22.581 0 20.653 21.598 11.987 24 3.345 21.601"></polygon>
+                      <polygon fill="#F16529" points="12 22.164 19.002 20.222 20.65 1.766 12 1.766"></polygon>
+                      <path fill="#EBEBEB" d="M12,9.778H8.495L8.252,7.065H12v-2.65H5.357l0.063,0.711l0.651,7.3H12V9.778L12,9.778z M12,16.658l-0.012,0.003l-2.95-0.797l-0.189-2.113H6.19l0.371,4.16l5.427,1.507L12,19.414V16.658L12,16.658z"></path>
+                      <path fill="#FFF" d="M11.991,9.778v2.649h3.263l-0.308,3.436l-2.955,0.797v2.756l5.431-1.505l0.04-0.448l0.623-6.974l0.064-0.712h-0.714H11.991L11.991,9.778z M11.991,4.415v2.65h6.399l0.053-0.596l0.121-1.343l0.063-0.711H11.991L11.991,4.415z"></path>
+                      <polygon fill="#DEDEDE" points="12 23.996 11.987 24 12 24 12 23.996"></polygon>
+                      <path fill="#C64321" d="M12,7.065L12,7.065H8.252l0.242,2.713h3.496H12V7.065L12,7.065z M12,0H1.419l1.926,21.601L11.987,24L12,23.996v-4.582v0l-0.012,0.004l-5.427-1.507l-0.371-4.16h2.659l0.189,2.113l2.95,0.797l0.003-0.001v0L12,16.658v-4.231H6.071l-0.651-7.3L5.357,4.415h6.634H12V0L12,0z"></path>
+                      <path fill="#CDCDCD" d="M8.849,13.751H6.19l0.371,4.16l5.427,1.507L12,19.414v0l-0.009,0.002v-2.756l-0.003,0.001l-2.95-0.797L8.849,13.751L8.849,13.751z M11.991,4.415H5.357l0.063,0.711l0.651,7.3H12h-0.009V9.778H8.495L8.252,7.065H12h-0.009V4.415L11.991,4.415z"></path>
+                      <path fill="#DEDEDE" d="M12,16.658l-0.009,0.002v0v2.756L12,19.414V16.658L12,16.658z M12,9.778h-0.009v2.649H12V9.778L12,9.778z M12,4.415h-0.009v2.65H12V4.415L12,4.415z"></path>
+                      </svg>`,
+              css: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />`,
+              js: `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="javascript">
+  <rect width="22.5" height="22.5" x=".75" y=".75" fill="#F0D91F"></rect>
+  <path d="M23.25,24H0.75C0.336,24,0,23.664,0,23.25V0.75C0,0.336,0.336,0,0.75,0h22.5C23.664,0,24,0.336,24,0.75v22.5C24,23.664,23.664,24,23.25,24z M1.5,22.5h21v-21h-21V22.5z"></path>
+  <path d="M9.5 22c-1.538 0-2.876-1.092-3.184-2.596C6.272 19.189 6.25 18.97 6.25 18.75 6.25 18.336 6.586 18 7 18s.75.336.75.75c0 .119.012.238.036.354C7.951 19.913 8.672 20.5 9.5 20.5c.965 0 1.75-.785 1.75-1.75v-7c0-.414.336-.75.75-.75s.75.336.75.75v7C12.75 20.542 11.292 22 9.5 22zM18.25 22c-1.93 0-3.5-1.346-3.5-3 0-.414.336-.75.75-.75s.75.336.75.75c0 .813.916 1.5 2 1.5s2-.687 2-1.5c0-.736-.746-1.336-2.218-1.782C15.916 16.575 14.75 15.433 14.75 14c0-1.654 1.57-3 3.5-3s3.5 1.346 3.5 3c0 .414-.336.75-.75.75s-.75-.336-.75-.75c0-.813-.916-1.5-2-1.5s-2 .687-2 1.5c0 .965 1.39 1.531 2.218 1.782 2.713.823 3.282 2.204 3.282 3.218C21.75 20.654 20.18 22 18.25 22z"></path>
                     </svg>`,
-              vite: ``,
-              github: '',
-              mySql: '',
-              Laravel: '',
-              Axios:'',
+              bootstrap: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />`,
+              vue: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" /> `,
+              github: `<svg viewBox="0 0 128 128">
+                         <g fill="#ffffff"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path></g>
+                      </svg> `,
+              vite: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />`,
+              mySql: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />`,
+              laravel: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />`,
+              axios:` <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" />
+          `,
           },
-
-
         };
       },
       methods: {
+        showToast:function(){
+          //toast
+          const toastLiveExample = document.getElementById('liveToast')
+            //instance of the toast
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            //show from the instance
+              toastBootstrap.show()
+        },
         openLink:function(link){
           link && window.open(link)
        },
        copyText:function(text){
-          navigator.clipboard.writeText(text).then(()=>console.log('Texto copiado')).catch(error=>console.log('algo salio mal',error))
-       },
+          navigator.clipboard.writeText(text).then(()=>console.log('Hola copiaste mi email. Excelente dia')).catch(error=>console.log('algo salio mal',error))
+          this.showToast()
+        },
       },
       mounted() {},
       watch: {}
