@@ -6,6 +6,7 @@ import HeaderComponent from './components/HeaderComponent.js';
 import PresentationComponent from './components/PresentationComponent.js';
 import JobCardComponent from './components/JobCardComponent.js';
 import EducationCardComponent from './components/EducationCardComponent.js';
+import ProyectComponentCard from './components/ProyectComponentCard.vue';
 
 
 const app = createApp({data() {return {}},methods: {},mounted() {},watch: {}});
@@ -16,5 +17,6 @@ app.component('header-component', HeaderComponent);
 app.component('presentation-component', PresentationComponent);
 app.component('job-card-component', JobCardComponent);
 app.component('education-card-component', EducationCardComponent);
+app.component('proyect-component-card', ProyectComponentCard);
 
 app.mount('#app');

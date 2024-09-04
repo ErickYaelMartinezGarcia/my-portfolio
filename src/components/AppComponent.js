@@ -33,8 +33,8 @@ const AppComponent = {
                 <h1 class="text-white text-center mt-5 mb-5 pb-5 rounded-5">Habilidades</h1>
                 <div class="row mx-auto">
                           <div v-for="icon in iconsLenguage"
-                            class="col-lg-4 col-4 col-md-6 mx-auto mb-5">
-                              <div class="rounded-4  mx-auto col-lg-4 col-sm-4 h-100">
+                            class="col-lg-4 col-sm-4 col-md-6 mx-auto mb-5">
+                              <div class="rounded-4  mx-auto col-lg-3 col-sm-4 h-100">
                                 <span class="h-100 text-center img-fluid" v-html="icon"></span>
                               </div>
                           </div>
@@ -45,14 +45,23 @@ const AppComponent = {
                     <div class="row mx-auto">
                     <template v-for="(info,i) in infoEducation">
                           <div class="col-lg-5 mx-auto my-auto">
-                             <education-card-component class="col-lg-10 mb-2" :info-job="info"/>
+                             <education-card-component class="col-lg-9 mx-auto mb-2" :info-job="info"/>
                          </div>
                      </template>
                     </div>
               </section>
                <section id="Proyectos" style="min-height:100vh">
                 <h1 class="text-white text-center mb-5 pb-5">Proyectos</h1>
-            
+                  <proyect-component-card class="col-3 mx-auto"
+                  :img="'/img/empresas-logos/proyecto.jpg'"
+                  :link="hola"
+                  :icons="{
+                  'html':iconsLenguage.html,
+                  'css':iconsLenguage.css,
+                  'js': iconsLenguage.js,
+                  'vue': iconsLenguage.vue,
+                  'vite': iconsLenguage.vite,
+                  }"/>             
 
 
 
