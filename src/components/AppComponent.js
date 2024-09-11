@@ -68,7 +68,7 @@ const AppComponent = {
                   'vite': iconsLenguage.vite,
                   }"/> 
                   
-                  <proyect-component-card id="GatoGameProyect" class="col-lg-3 col-md-5 my-sm-5 my-0 mx-auto"
+                  <proyect-component-card id="GatoGameProyect" class="col-lg-3 col-md-5 my-lg-0 my-5 mx-auto"
                   :title="'Juego del gato'"
                   :img="'/img/empresas-logos/gato.webp'"
                   :link="'https://tictactoe-seven-sooty.vercel.app/'"
