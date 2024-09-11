@@ -33,7 +33,7 @@ const AppComponent = {
                 <h1 class="text-white text-center mt-5 mb-5 pb-5 rounded-5">Habilidades</h1>
                 <div class="row mx-auto">
                           <div v-for="icon in iconsLenguage"
-                            class="col-lg-4 col-sm-4 col-md-6 mx-auto mb-5">
+                            class="col-4 mx-auto mb-5">
                               <div class="rounded-4  mx-auto col-lg-3 col-sm-4 h-100">
                                 <span class="h-100 text-center img-fluid" v-html="icon"></span>
                               </div>
@@ -52,7 +52,7 @@ const AppComponent = {
               </section>
                <section id="Proyectos" style="min-height:100vh">
                 <h1 class="text-white text-center mb-5 pb-5">Proyectos</h1>
-                  <proyect-component-card class="col-3 mx-auto"
+                  <proyect-component-card class="col-lg-3 mx-auto"
                   :img="'/img/empresas-logos/proyecto.jpg'"
                   :link="hola"
                   :icons="{
