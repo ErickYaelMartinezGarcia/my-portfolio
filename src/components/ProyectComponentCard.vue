@@ -1,12 +1,12 @@
 <template>
-<div class="article-wrapper">
+<div class="article-wrapper" @click="openNewWindow(link)">
   <div class="rounded-lg container-project">
     <img class="img-fluid rounded-3 h-100" :src="img" alt="ProyectImage">
     </div>
     <div class="px-3 pt-3">
       <div class="flex-pr">
         <!-- name proyect v-text="proyectName" -->
-        <h3 class="text-nowrap">Portafolio Personal</h3>
+        <h3 class="text-nowrap" v-text="title"></h3>
           <div class="project-hover d-flex justify-content-center">
             <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" color="black" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><line y2="12" x2="19" y1="12" x1="5"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </div>
@@ -35,6 +35,7 @@
                 type: String,
                 required: false,
             },
+            title: String,
     },
     data () {
         return {
@@ -42,7 +43,9 @@
         }
     },
     methods: {
-        
+        openNewWindow(link){
+          link && window.open(link)
+        }
     },
     watch:{
 

@@ -52,19 +52,46 @@ const AppComponent = {
               </section>
                <section id="Proyectos" style="min-height:100vh">
                 <h1 class="text-white text-center mb-5 pb-5">Proyectos</h1>
-                  <proyect-component-card class="col-lg-3 mx-auto"
+                
+                <div class="row mx-auto my-auto ">
+                
+                
+                  <proyect-component-card class="col-lg-3 col-md-5 mx-auto"
+                  :title="'Portafolio personal'"
                   :img="'/img/empresas-logos/proyecto.jpg'"
-                  :link="hola"
+                  :link="'https://my-portfolio-git-main-erick-yael-martinez-garcias-projects.vercel.app/'"
                   :icons="{
                   'html':iconsLenguage.html,
                   'css':iconsLenguage.css,
                   'js': iconsLenguage.js,
                   'vue': iconsLenguage.vue,
                   'vite': iconsLenguage.vite,
-                  }"/>             
+                  }"/> 
+                  
+                  <proyect-component-card id="GatoGameProyect" class="col-lg-3 col-md-5 mx-auto"
+                  :title="'Juego del gato'"
+                  :img="'/img/empresas-logos/gato.webp'"
+                  :link="'https://tictactoe-seven-sooty.vercel.app/'"
+                  :icons="{
+                  'html':iconsLenguage.html,
+                  'js': iconsLenguage.js,
+                  'vue': iconsLenguage.vue,
+                  'vite': iconsLenguage.vite,
+                  }"/>    
+
+                   <proyect-component-card id="mercadoFalseProyect" class="col-lg-3 col-md-5 mx-auto"
+                  :title="'Proximamente'"
+                  :img="'/img/empresas-logos/proximamente.jpg'"
+                  :link="'https://mercadofalso.vercel.app/'"
+                  :icons="{
+                  'html':iconsLenguage.html,
+                  'react': iconsLenguage.react,
+                  'vite': iconsLenguage.vite,
+
+                  }"/>   
 
 
-
+              </div>
 
               </section>
             
@@ -167,8 +194,8 @@ const AppComponent = {
               vite: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />`,
               mySql: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />`,
               laravel: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />`,
-              axios:` <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" />
-          `,
+              axios:` <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" />`,
+              react: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />`,
           },
         };
       },
