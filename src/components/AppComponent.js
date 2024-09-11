@@ -11,7 +11,7 @@ const AppComponent = {
     </section>
         <section class="d-lg-flex align-items-center" style="min-height:85vh">
           <presentation-component></presentation-component>
-            <div class="col-lg-5 col-md-6 mx-lg-5 mt-5 mt-lg-0 me-auto rounded-5">
+            <div class="col-lg-5 col-md-6 mx-lg-5 mx-md-auto mt-5 mt-lg-0 me-auto rounded-5">
               <div class="px-lg-3 pt-0 rounded-5" style="background-color:rgb(0,4,14)">
                   <div class="px-lg-4 rounded-5 rounded-top-0" style="background-color:rgb(0,4,20)">
                     <div class="d-flex justify-content-center">
@@ -56,7 +56,7 @@ const AppComponent = {
                 <div class="row mx-auto my-auto ">
                 
                 
-                  <proyect-component-card class="col-lg-3 col-md-5 mx-auto"
+                  <proyect-component-card class="col-lg-3 col-md-5 mx-auto my-auto  "
                   :title="'Portafolio personal'"
                   :img="'/img/empresas-logos/proyecto.jpg'"
                   :link="'https://my-portfolio-git-main-erick-yael-martinez-garcias-projects.vercel.app/'"
