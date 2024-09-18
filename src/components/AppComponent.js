@@ -82,7 +82,7 @@ const AppComponent = {
                    <proyect-component-card id="mercadoFalseProyect" class="col-lg-3 col-md-5 mx-auto"
                   :title="'Proximamente'"
                   :img="'/img/empresas-logos/proximamente.jpg'"
-                  :link="'https://mercadofalso-8c1y9grxz-erick-yael-martinez-garcias-projects.vercel.app/'"
+                  :link="'https://mercadofalso.vercel.app/'"
                   :icons="{
                   'html':iconsLenguage.html,
                   'react': iconsLenguage.react,
