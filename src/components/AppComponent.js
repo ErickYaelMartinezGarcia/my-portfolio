@@ -29,8 +29,9 @@ const AppComponent = {
                 <job-card-component class="col-lg-3 mx-auto my-5" :info-job="infoJob"/>
               </div>
             </section>
+            <!-- ------------- -->
               <section class="mb-5 pt-5" id="Skills" style="min-height:100vh">
-                <h1 class="text-white text-center mt-5 mb-5 pb-5 rounded-5">Habilidades</h1>
+                <h1 class="text-white text-center mb-lg-3 pb-4  rounded-5">Habilidades</h1>
                 <div class="row mx-auto">
                           <div v-for="icon in iconsLenguage"
                             class="col-4 mx-auto mb-5">
@@ -41,7 +42,7 @@ const AppComponent = {
                 </div>
               </section>
                <section id="Educación" style="min-height:100vh">
-                <h1 class="text-white text-center my-5 py-5">Educaci&oacuten</h1>
+                <h1 class="text-white text-center my-lg-5 py-4 ">Educaci&oacuten</h1>
                     <div class="row mx-auto">
                     <template v-for="(info,i) in infoEducation">
                           <div class="col-lg-5 mx-auto my-auto">
@@ -51,7 +52,7 @@ const AppComponent = {
                     </div>
               </section>
                <section id="Proyectos" style="min-height:100vh">
-                <h1 class="text-white text-center my-5 py-5">Proyectos</h1>
+                <h1 class="text-white text-center my-lg-5 py-4 ">Proyectos</h1>
                 
                 <div class="row mx-auto my-auto ">
                 
