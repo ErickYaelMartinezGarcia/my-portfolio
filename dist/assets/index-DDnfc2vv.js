@@ -52,10 +52,10 @@
             </div>
         </section>
       
-            <section id="Experiencia" class="mx-auto h-100">
-              <h1 class="text-white text-center my-5 pb-5">Experiencia</h1>
-              <div class="my-auto row justify-content-center align-items-center mb-5 pb-5">
-                <job-card-component class="col-lg-3 mx-auto my-auto" :info-job="infoJob"/>
+            <section id="Experiencia" class="mx-auto" style="height:100vh">
+              <h1 class="text-white text-center my-5 py-5">Experiencia</h1>
+              <div class="row justify-content-center h-100">
+                <job-card-component class="col-lg-3 mx-auto my-5" :info-job="infoJob"/>
               </div>
             </section>
               <section class="mb-5 pt-5" id="Skills" style="min-height:100vh">
@@ -69,8 +69,8 @@
                           </div>
                 </div>
               </section>
-               <section id="Educacion" style="min-height:95vh">
-                <h1 class="text-white text-center mb-5 pb-5">Educaci&oacuten</h1>
+               <section id="Educación" style="min-height:100vh">
+                <h1 class="text-white text-center my-5 py-5">Educaci&oacuten</h1>
                     <div class="row mx-auto">
                     <template v-for="(info,i) in infoEducation">
                           <div class="col-lg-5 mx-auto my-auto">
@@ -80,7 +80,7 @@
                     </div>
               </section>
                <section id="Proyectos" style="min-height:100vh">
-                <h1 class="text-white text-center mb-5 pb-5">Proyectos</h1>
+                <h1 class="text-white text-center my-5 py-5">Proyectos</h1>
                 
                 <div class="row mx-auto my-auto ">
                 
@@ -111,7 +111,7 @@
                    <proyect-component-card id="mercadoFalseProyect" class="col-lg-3 col-md-5 mx-auto"
                   :title="'Proximamente'"
                   :img="'/img/empresas-logos/proximamente.jpg'"
-                  :link="'https://mercadofalso.vercel.app/'"
+                  :link="'https://mercado-falso.vercel.app/'"
                   :icons="{
                   'html':iconsLenguage.html,
                   'react': iconsLenguage.react,
@@ -219,9 +219,9 @@
         </div>
       </div>
     `,data(){return{}},methods:{},mounted(){},watch:{}},Zm={props:{infoJob:{required:!0,type:Object}},template:`
-    <div class=" rounded-5 ">
+    <div class="rounded-5 ">
         <div class="d-flex text-white">
-            <div class=" mx-auto">
+            <div class="mx-auto">
                 <!-- img -->
                 <img class="img-fluid p-2" :src="infoJob.img" alt="Imagen de empresa" />
             </div>
@@ -262,4 +262,4 @@
             </div>
         
     </div>    
-`,data(){return{}},methods:{openLink:function(e){e&&window.open(e)},changeBg:function(e){let t=event.currentTarget;e?t.classList.add("gradientBg"):t.classList.remove("gradientBg")}},mounted(){},watch:{}},tg=(e,t)=>{const n=e.__vccOpts||e;for(const[s,i]of t)n[s]=i;return n},ng={props:{icons:Object,img:String,link:{type:String,required:!1},title:String},data(){return{}},methods:{openNewWindow(e){e&&window.open(e)}},watch:{},mounted(){}},Ef=e=>(oc("data-v-91a921b0"),e=e(),lc(),e),sg={class:"rounded-lg container-project"},ig=["src"],rg={class:"px-3 pt-3"},og={class:"flex-pr"},lg=["textContent"],cg={class:"project-hover d-flex justify-content-center"},ag={style:{color:"black"},xmlns:"http://www.w3.org/2000/svg",width:"2em",height:"2em",color:"black","stroke-linejoin":"round","stroke-linecap":"round",viewBox:"0 0 24 24","stroke-width":"2",fill:"none",stroke:"currentColor"},fg=Ef(()=>$e("line",{y2:"12",x2:"19",y1:"12",x1:"5"},null,-1)),ug=Ef(()=>$e("polyline",{points:"12 5 19 12 12 19"},null,-1)),hg=[fg,ug],dg={class:"d-flex mx-auto py-2 pt-2"},pg={class:"col-lg-2 my-auto mx-auto"},mg=["innerHTML"];function gg(e,t,n,s,i,r){return Nt(),Fn("div",{class:"article-wrapper",onClick:t[0]||(t[0]=o=>r.openNewWindow(n.link))},[$e("div",sg,[$e("img",{class:"img-fluid rounded-3 h-100",src:n.img,alt:"ProyectImage"},null,8,ig)]),$e("div",rg,[$e("div",og,[$e("h3",{class:"text-nowrap",textContent:vr(n.title)},null,8,lg),$e("div",cg,[(Nt(),Fn("svg",ag,hg))])]),$e("div",dg,[(Nt(!0),Fn(Ee,null,Sc(n.icons,o=>(Nt(),Fn("div",pg,[$e("div",{class:"img-fluid col-9",innerHTML:o},null,8,mg)]))),256))])])])}const yg=tg(ng,[["render",gg],["__scopeId","data-v-91a921b0"]]),ln=Ra({data(){return{}},methods:{},mounted(){},watch:{}});ln.component("app-component",Ym);ln.component("header-component",Xm);ln.component("presentation-component",Qm);ln.component("job-card-component",Zm);ln.component("education-card-component",eg);ln.component("proyect-component-card",yg);ln.mount("#app");
+`,data(){return{}},methods:{openLink:function(e){e&&window.open(e)},changeBg:function(e){let t=event.currentTarget;e?t.classList.add("gradientBg"):t.classList.remove("gradientBg")}},mounted(){},watch:{}},tg=(e,t)=>{const n=e.__vccOpts||e;for(const[s,i]of t)n[s]=i;return n},ng={props:{icons:Object,img:String,link:{type:String,required:!1},title:String},data(){return{}},methods:{openNewWindow(e){e&&window.open(e)}},watch:{},mounted(){}},Ef=e=>(oc("data-v-882ab753"),e=e(),lc(),e),sg={class:"rounded-lg container-project"},ig=["src"],rg={class:"px-3 pt-3"},og={class:"flex-pr"},lg=["textContent"],cg={class:"project-hover d-flex justify-content-center"},ag={style:{color:"black"},xmlns:"http://www.w3.org/2000/svg",width:"2em",height:"2em",color:"black","stroke-linejoin":"round","stroke-linecap":"round",viewBox:"0 0 24 24","stroke-width":"2",fill:"none",stroke:"currentColor"},fg=Ef(()=>$e("line",{y2:"12",x2:"19",y1:"12",x1:"5"},null,-1)),ug=Ef(()=>$e("polyline",{points:"12 5 19 12 12 19"},null,-1)),hg=[fg,ug],dg={class:"d-flex mx-auto py-2 pt-2"},pg={class:"col-lg-2 my-auto mx-auto"},mg=["innerHTML"];function gg(e,t,n,s,i,r){return Nt(),Fn("div",{class:"article-wrapper",onClick:t[0]||(t[0]=o=>r.openNewWindow(n.link))},[$e("div",sg,[$e("img",{class:"img-fluid rounded-3 h-100",src:n.img,alt:"ProyectImage"},null,8,ig)]),$e("div",rg,[$e("div",og,[$e("h3",{class:"text-nowrap",textContent:vr(n.title)},null,8,lg),$e("div",cg,[(Nt(),Fn("svg",ag,hg))])]),$e("div",dg,[(Nt(!0),Fn(Ee,null,Sc(n.icons,o=>(Nt(),Fn("div",pg,[$e("div",{class:"img-fluid col-9",innerHTML:o},null,8,mg)]))),256))])])])}const yg=tg(ng,[["render",gg],["__scopeId","data-v-882ab753"]]),ln=Ra({data(){return{}},methods:{},mounted(){},watch:{}});ln.component("app-component",Ym);ln.component("header-component",Xm);ln.component("presentation-component",Qm);ln.component("job-card-component",Zm);ln.component("education-card-component",eg);ln.component("proyect-component-card",yg);ln.mount("#app");

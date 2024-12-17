@@ -23,10 +23,10 @@ const AppComponent = {
             </div>
         </section>
       
-            <section id="Experiencia" class="mx-auto h-100">
-              <h1 class="text-white text-center my-5 pb-5">Experiencia</h1>
-              <div class="my-auto row justify-content-center align-items-center mb-5 pb-5">
-                <job-card-component class="col-lg-3 mx-auto my-auto" :info-job="infoJob"/>
+            <section id="Experiencia" class="mx-auto" style="height:100vh">
+              <h1 class="text-white text-center my-5 py-5">Experiencia</h1>
+              <div class="row justify-content-center h-100">
+                <job-card-component class="col-lg-3 mx-auto my-5" :info-job="infoJob"/>
               </div>
             </section>
               <section class="mb-5 pt-5" id="Skills" style="min-height:100vh">
@@ -40,8 +40,8 @@ const AppComponent = {
                           </div>
                 </div>
               </section>
-               <section id="Educacion" style="min-height:95vh">
-                <h1 class="text-white text-center mb-5 pb-5">Educaci&oacuten</h1>
+               <section id="Educación" style="min-height:100vh">
+                <h1 class="text-white text-center my-5 py-5">Educaci&oacuten</h1>
                     <div class="row mx-auto">
                     <template v-for="(info,i) in infoEducation">
                           <div class="col-lg-5 mx-auto my-auto">
@@ -51,7 +51,7 @@ const AppComponent = {
                     </div>
               </section>
                <section id="Proyectos" style="min-height:100vh">
-                <h1 class="text-white text-center mb-5 pb-5">Proyectos</h1>
+                <h1 class="text-white text-center my-5 py-5">Proyectos</h1>
                 
                 <div class="row mx-auto my-auto ">
                 

@@ -7,9 +7,9 @@ const JobCardComponent = {
             },
     },
     template:`
-    <div class=" rounded-5 ">
+    <div class="rounded-5 ">
         <div class="d-flex text-white">
-            <div class=" mx-auto">
+            <div class="mx-auto">
                 <!-- img -->
                 <img class="img-fluid p-2" :src="infoJob.img" alt="Imagen de empresa" />
             </div>
