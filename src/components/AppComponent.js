@@ -23,10 +23,11 @@ const AppComponent = {
             </div>
         </section>
       
-            <section id="Experiencia" class="mx-auto" style="height:100vh">
-              <h1 class="text-white text-center my-5 py-5">Experiencia</h1>
+            <section id="Experiencia" class="mx-auto" style="min-height:100vh">
+              <h1 class="text-white text-center">Experiencia</h1>
               <div class="row justify-content-center h-100">
                 <job-card-component class="col-lg-3 mx-auto my-5" :info-job="infoJob"/>
+                <job-card-component class="col-lg-3 mx-auto my-5" :info-job="infoJobBabel"/>
               </div>
             </section>
             <!-- ------------- -->
@@ -149,6 +150,13 @@ const AppComponent = {
             description:`Desarrollé y actualicé módulos para clientes y uso interno, creados con Vue.js 3, bootstrap y Laravel.
              Utilicé MySQL, Axios y otras integraciones de servicios mediante APIs.`,
           },
+           infoJobBabel:{
+            img:'/img/empresas-logos/babel-logo.jpg',
+            title:"Babel Group",
+            role:"Desarrollador Front End",
+            date:"Mar/2025 - Presente",
+            description:`Trabaje como consultor externo en la empresa BBVA en donde realice desarrollo de microFrontEnds con base a tecnologias SAAs, Cells, LitElement, JS y me involucre en todo el SDLC correspondiente`,
+          },
           infoEducation:{
             infoCertification:{
               img:'https://www.freecodecamp.org/espanol/news/content/images/2020/11/fcc_puck_600_social-1.jpg',
@@ -156,6 +164,12 @@ const AppComponent = {
               role:"Legacy JavaScript Algorithms and Data Structures",
               date:"Free Code Camp",
               link: `https://www.freecodecamp.org/espanol/certification/Erick_Yael_Mtz_G/javascript-algorithms-and-data-structures`
+            },
+             scrumDeveloper:{
+              img:'/img/empresas-logos/scrumDeveloper-logo.jpg',
+              title:"Certificado",
+              role:"Scrum Developer",
+              date:"ScrumStudy"
             },
             infoTecnico:{
               img:'/img/empresas-logos/cetecLogo.png',
