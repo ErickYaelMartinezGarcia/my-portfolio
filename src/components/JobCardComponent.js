@@ -6,8 +6,9 @@ const JobCardComponent = {
                 type:Object,
             },
     },
+
     template:`
-    <div class="rounded-5 ">
+    <div class="rounded-4 mb-lg-auto py-lg-5 mx-sm-auto" :class="this.isMobile ? 'border-0' : 'border border-2'">
         <div class="d-flex text-white">
             <div class="mx-auto">
                 <!-- img -->
@@ -32,14 +33,18 @@ const JobCardComponent = {
     
 data() {
     return {
-
+        isMobile:false
     };
   },
   methods: {
-
+    configIsMobile:function(){
+     this.isMobile = window.innerWidth < 768 
+    }
     
   },
-  mounted() {},
+  mounted() {
+   this.configIsMobile()
+  },
   watch: {}
 
 }
