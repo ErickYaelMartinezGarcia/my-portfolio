@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://my-portfolio-alpha-sepia-68.vercel.app/sitemap.xml
